@@ -1,6 +1,7 @@
 import random
 
 test_cases = [
+    # add_demo_g.py
     {
         "co_names": ["a0", "a1", "a2", "a3", "a4", "a", "print", "b0", "b1", "b"],
         "co_globals": [],
@@ -71,6 +72,7 @@ test_cases = [
             ("RETURN_VALUE",)
         ]
     },
+    # multiply_demo_g.py
     {
         "co_names": ["a0", "a1", "a2", "a3", "a4", "a", "b0", "b", "c", "print"],
         "co_globals": [],
@@ -131,6 +133,7 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # if_demo_g.py
     {
         "co_names": ["grade", "print"],
         "co_globals": [],
@@ -169,6 +172,7 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # arr_demo_g.py
     {
         "co_names": ["arr", "i", "print", "tmp"],
         "co_globals": [],
@@ -242,6 +246,7 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # for_demo0_g.py
     {
         "co_consts": (20, 30, 40, 50, '<= 30', '> 30', '结束', None),
         "co_names": ('arr', 'v', 'print'),
@@ -282,6 +287,7 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # for_demo1_g.py
     {
         "co_consts": (3, 4, 5, 6, 7, 2, 0, 10, 1, '结束力', None),
         "co_names": ('arr0', 'arr1', 'ii', 'i', 'jj', 'j', 'print'),
@@ -361,6 +367,7 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # comprehensive_demo0_g.py
     {
         "co_consts": (0, 10, 20, 30, 40, 1, 2, 3, 4, 'w > 2', 5, 'w <= 2', '忽略', None),
         "co_names": ('i', 'arr0', 'arr1', 'v', 'j', 'w', 'print'),
@@ -461,6 +468,149 @@ test_cases = [
             ('RETURN_VALUE',)
         ]
     },
+    # comprehensive_demo1_g.py
+    {
+        "co_consts": (0, 1, 2, 3, 4, 5, 6, 7, None),
+        "co_names": ('c', 'arr0', 'i', 'j', 'print'),
+        "co_code": [
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 0),
+            ('BUILD_LIST', 8),
+            ('BUILD_LIST', 8),
+            ('STORE_NAME', 0),
+            ('LOAD_CONST', 0),
+            ('LOAD_CONST', 1),
+            ('LOAD_CONST', 2),
+            ('LOAD_CONST', 3),
+            ('LOAD_CONST', 4),
+            ('LOAD_CONST', 5),
+            ('LOAD_CONST', 6),
+            ('LOAD_CONST', 7),
+            ('BUILD_LIST', 8),
+            ('STORE_NAME', 1),
+            ('SETUP_LOOP', 88),
+            ('LOAD_NAME', 1),
+            ('GET_ITER',),
+            ('FOR_ITER', 80),
+            ('STORE_NAME', 2),
+            ('SETUP_LOOP', 74),
+            ('LOAD_NAME', 1),
+            ('GET_ITER',),
+            ('FOR_ITER', 66),
+            ('STORE_NAME', 3),
+            ('LOAD_NAME', 3),
+            ('POP_JUMP_IF_TRUE', 206),
+            ('LOAD_CONST', 1),
+            ('LOAD_NAME', 0),
+            ('LOAD_NAME', 2),
+            ('BINARY_SUBSCR',),
+            ('LOAD_NAME', 3),
+            ('STORE_SUBSCR',),
+            ('JUMP_ABSOLUTE', 184),
+            ('LOAD_NAME', 0),
+            ('LOAD_NAME', 2),
+            ('LOAD_CONST', 1),
+            ('BINARY_SUBTRACT',),
+            ('BINARY_SUBSCR',),
+            ('LOAD_NAME', 3),
+            ('BINARY_SUBSCR',),
+            ('LOAD_NAME', 0),
+            ('LOAD_NAME', 2),
+            ('LOAD_CONST', 1),
+            ('BINARY_SUBTRACT',),
+            ('BINARY_SUBSCR',),
+            ('LOAD_NAME', 3),
+            ('LOAD_CONST', 1),
+            ('BINARY_SUBTRACT',),
+            ('BINARY_SUBSCR',),
+            ('BINARY_ADD',),
+            ('LOAD_NAME', 0),
+            ('LOAD_NAME', 2),
+            ('BINARY_SUBSCR',),
+            ('LOAD_NAME', 3),
+            ('STORE_SUBSCR',),
+            ('JUMP_ABSOLUTE', 184),
+            ('POP_BLOCK',),
+            ('JUMP_ABSOLUTE', 174),
+            ('POP_BLOCK',),
+            ('LOAD_NAME', 4),
+            ('LOAD_NAME', 0),
+            ('CALL_FUNCTION', 1),
+            ('POP_TOP',),
+            ('LOAD_CONST', 8),
+            ('RETURN_VALUE',)
+        ]
+    },
+    # for_demo0_g.py：因为有range函数，未解决。前面的几个样例均正确。
     {
         "co_consts": (115, 99, 117, 116, 102, 123, 80, 121, 104, 48, 110, 95, 66, 105, 97, 114, 67, 111, 100, 51, 125, 26, 2, 'enc =', None),
         "co_names": ('arr', 'range', 'i', 'print'),
@@ -643,3 +793,25 @@ test_cases = [
 # [dbg] POP_BLOCK ignored
 # 4 [20, 30, 40, 50] [3, 4, 5, 6]
 # [dbg] stack [0, [10, 20, 30, 40], [1, 2, 3, 4]]
+
+# case8
+# [dbg] SETUP_LOOP ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] SETUP_LOOP ignored
+# [dbg] POP_BLOCK ignored
+# [dbg] POP_BLOCK ignored
+# [[1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0], [1, 2, 1, 0, 0, 0, 0, 0], [1, 3, 3, 1, 0, 0, 0, 0], [1, 4, 6, 4, 1, 0, 0, 0], [1, 5, 10, 10, 5, 1, 0, 0], [1, 6, 15, 20, 15, 6, 1, 0], [1, 7, 21, 35, 35, 21, 7, 1]]
+# [dbg] stack [[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]], [0, 1, 2, 3, 4, 5, 6, 7]]

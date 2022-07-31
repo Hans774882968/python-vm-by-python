@@ -18,7 +18,8 @@ global_demo_paths = [
     'demos/for_demo_g',
     'demos/for_demo0_g',
     'demos/for_demo1_g',
-    'demos/comprehensive_demo0_g'
+    'demos/comprehensive_demo0_g',
+    'demos/comprehensive_demo1_g'
 ]
 for global_demo_path in global_demo_paths:
     with open(f'{global_demo_path}.txt', 'w', encoding='utf-8') as f:

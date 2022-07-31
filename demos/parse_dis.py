@@ -1,4 +1,4 @@
-global_demo_path = 'demos/comprehensive_demo0_g'
+global_demo_path = 'demos/comprehensive_demo1_g'
 with open(f'{global_demo_path}.txt', 'r', encoding='utf-8') as f:
     lines = f.readlines()[2:]
     ans = []
