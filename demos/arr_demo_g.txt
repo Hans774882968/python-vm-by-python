@@ -1,0 +1,77 @@
+co_consts = (20, 30, 40, 50, 60, 1, '<= 20', '<= 30', '> 30', None)
+co_names = ('arr', 'i', 'print', 'tmp')
+  1           0 LOAD_CONST               0 (20)
+              2 LOAD_CONST               1 (30)
+              4 LOAD_CONST               2 (40)
+              6 LOAD_CONST               3 (50)
+              8 LOAD_CONST               4 (60)
+             10 BUILD_LIST               5
+             12 STORE_NAME               0 (arr)
+
+  2          14 LOAD_CONST               5 (1)
+             16 STORE_NAME               1 (i)
+
+  3          18 LOAD_NAME                0 (arr)
+             20 LOAD_NAME                1 (i)
+             22 BINARY_SUBSCR
+             24 LOAD_CONST               0 (20)
+             26 COMPARE_OP               1 (<=)
+             28 POP_JUMP_IF_FALSE       46
+
+  4          30 LOAD_NAME                2 (print)
+             32 LOAD_NAME                0 (arr)
+             34 LOAD_NAME                1 (i)
+             36 BINARY_SUBSCR
+             38 LOAD_CONST               6 ('<= 20')
+             40 CALL_FUNCTION            2
+             42 POP_TOP
+             44 JUMP_FORWARD            42 (to 88)
+
+  5     >>   46 LOAD_NAME                0 (arr)
+             48 LOAD_NAME                1 (i)
+             50 BINARY_SUBSCR
+             52 LOAD_CONST               1 (30)
+             54 COMPARE_OP               1 (<=)
+             56 POP_JUMP_IF_FALSE       74
+
+  6          58 LOAD_NAME                2 (print)
+             60 LOAD_NAME                0 (arr)
+             62 LOAD_NAME                1 (i)
+             64 BINARY_SUBSCR
+             66 LOAD_CONST               7 ('<= 30')
+             68 CALL_FUNCTION            2
+             70 POP_TOP
+             72 JUMP_FORWARD            14 (to 88)
+
+  8     >>   74 LOAD_NAME                2 (print)
+             76 LOAD_NAME                0 (arr)
+             78 LOAD_NAME                1 (i)
+             80 BINARY_SUBSCR
+             82 LOAD_CONST               8 ('> 30')
+             84 CALL_FUNCTION            2
+             86 POP_TOP
+
+  9     >>   88 LOAD_NAME                0 (arr)
+             90 LOAD_NAME                1 (i)
+             92 BINARY_SUBSCR
+             94 STORE_NAME               3 (tmp)
+
+ 10          96 LOAD_NAME                0 (arr)
+             98 LOAD_NAME                1 (i)
+            100 DUP_TOP_TWO
+            102 BINARY_SUBSCR
+            104 LOAD_CONST               0 (20)
+            106 INPLACE_ADD
+            108 ROT_THREE
+            110 STORE_SUBSCR
+
+ 11         112 LOAD_NAME                2 (print)
+            114 LOAD_NAME                3 (tmp)
+            116 LOAD_NAME                0 (arr)
+            118 LOAD_NAME                1 (i)
+            120 BINARY_SUBSCR
+            122 LOAD_NAME                0 (arr)
+            124 CALL_FUNCTION            3
+            126 POP_TOP
+            128 LOAD_CONST               9 (None)
+            130 RETURN_VALUE

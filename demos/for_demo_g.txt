@@ -1,0 +1,100 @@
+co_consts = (115, 99, 117, 116, 102, 123, 80, 121, 104, 48, 110, 95, 66, 105, 97, 114, 67, 111, 100, 51, 125, 26, 2, 'enc =', None)
+co_names = ('arr', 'range', 'i', 'print')
+  2           0 LOAD_CONST               0 (115)
+              2 LOAD_CONST               1 (99)
+              4 LOAD_CONST               2 (117)
+              6 LOAD_CONST               1 (99)
+              8 LOAD_CONST               3 (116)
+             10 LOAD_CONST               4 (102)
+             12 LOAD_CONST               5 (123)
+             14 LOAD_CONST               6 (80)
+             16 LOAD_CONST               7 (121)
+             18 LOAD_CONST               3 (116)
+             20 LOAD_CONST               8 (104)
+             22 LOAD_CONST               9 (48)
+
+  3          24 LOAD_CONST              10 (110)
+             26 LOAD_CONST              11 (95)
+             28 LOAD_CONST              12 (66)
+             30 LOAD_CONST              13 (105)
+             32 LOAD_CONST              10 (110)
+             34 LOAD_CONST              14 (97)
+             36 LOAD_CONST              15 (114)
+             38 LOAD_CONST               7 (121)
+             40 LOAD_CONST              11 (95)
+             42 LOAD_CONST              16 (67)
+             44 LOAD_CONST              17 (111)
+             46 LOAD_CONST              18 (100)
+             48 LOAD_CONST              19 (51)
+             50 LOAD_CONST              20 (125)
+             52 BUILD_LIST              26
+             54 STORE_NAME               0 (arr)
+
+  4          56 SETUP_LOOP              32 (to 90)
+             58 LOAD_NAME                1 (range)
+             60 LOAD_CONST              21 (26)
+             62 CALL_FUNCTION            1
+             64 GET_ITER
+        >>   66 FOR_ITER                20 (to 88)
+             68 STORE_NAME               2 (i)
+
+  5          70 LOAD_NAME                0 (arr)
+             72 LOAD_NAME                2 (i)
+             74 DUP_TOP_TWO
+             76 BINARY_SUBSCR
+             78 LOAD_NAME                2 (i)
+             80 INPLACE_ADD
+             82 ROT_THREE
+             84 STORE_SUBSCR
+             86 JUMP_ABSOLUTE           66
+        >>   88 POP_BLOCK
+
+  6     >>   90 SETUP_LOOP              36 (to 128)
+             92 LOAD_NAME                1 (range)
+             94 LOAD_CONST              21 (26)
+             96 CALL_FUNCTION            1
+             98 GET_ITER
+        >>  100 FOR_ITER                24 (to 126)
+            102 STORE_NAME               2 (i)
+
+  7         104 LOAD_NAME                0 (arr)
+            106 LOAD_NAME                2 (i)
+            108 DUP_TOP_TWO
+            110 BINARY_SUBSCR
+            112 LOAD_CONST              21 (26)
+            114 LOAD_NAME                2 (i)
+            116 BINARY_SUBTRACT
+            118 INPLACE_XOR
+            120 ROT_THREE
+            122 STORE_SUBSCR
+            124 JUMP_ABSOLUTE          100
+        >>  126 POP_BLOCK
+
+  8     >>  128 SETUP_LOOP              36 (to 166)
+            130 LOAD_NAME                1 (range)
+            132 LOAD_CONST              21 (26)
+            134 CALL_FUNCTION            1
+            136 GET_ITER
+        >>  138 FOR_ITER                24 (to 164)
+            140 STORE_NAME               2 (i)
+
+  9         142 LOAD_NAME                0 (arr)
+            144 LOAD_NAME                2 (i)
+            146 DUP_TOP_TWO
+            148 BINARY_SUBSCR
+            150 LOAD_CONST              22 (2)
+            152 LOAD_NAME                2 (i)
+            154 BINARY_MULTIPLY
+            156 INPLACE_MULTIPLY
+            158 ROT_THREE
+            160 STORE_SUBSCR
+            162 JUMP_ABSOLUTE          138
+        >>  164 POP_BLOCK
+
+ 11     >>  166 LOAD_NAME                3 (print)
+            168 LOAD_CONST              23 ('enc =')
+            170 LOAD_NAME                0 (arr)
+            172 CALL_FUNCTION            2
+            174 POP_TOP
+            176 LOAD_CONST              24 (None)
+            178 RETURN_VALUE

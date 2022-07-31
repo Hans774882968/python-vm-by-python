@@ -1,0 +1,111 @@
+co_consts = (0, 10, 20, 30, 40, 1, 2, 3, 4, 'w > 2', 5, 'w <= 2', '忽略', None)
+co_names = ('i', 'arr0', 'arr1', 'v', 'j', 'w', 'print')
+  1           0 LOAD_CONST               0 (0)
+              2 STORE_NAME               0 (i)
+
+  2           4 LOAD_CONST               1 (10)
+              6 LOAD_CONST               2 (20)
+              8 LOAD_CONST               3 (30)
+             10 LOAD_CONST               4 (40)
+             12 BUILD_LIST               4
+             14 STORE_NAME               1 (arr0)
+
+  3          16 LOAD_CONST               5 (1)
+             18 LOAD_CONST               6 (2)
+             20 LOAD_CONST               7 (3)
+             22 LOAD_CONST               8 (4)
+             24 BUILD_LIST               4
+             26 STORE_NAME               2 (arr1)
+
+  4          28 SETUP_LOOP             142 (to 172)
+             30 LOAD_NAME                1 (arr0)
+             32 GET_ITER
+        >>   34 FOR_ITER               134 (to 170)
+             36 STORE_NAME               3 (v)
+
+  5          38 LOAD_NAME                3 (v)
+             40 LOAD_CONST               2 (20)
+             42 COMPARE_OP               4 (>)
+             44 POP_JUMP_IF_FALSE      136
+
+  6          46 LOAD_CONST               0 (0)
+             48 STORE_NAME               4 (j)
+
+  7          50 SETUP_LOOP              92 (to 144)
+             52 LOAD_NAME                2 (arr1)
+             54 GET_ITER
+        >>   56 FOR_ITER                74 (to 132)
+             58 STORE_NAME               5 (w)
+
+  8          60 LOAD_NAME                5 (w)
+             62 LOAD_CONST               6 (2)
+             64 COMPARE_OP               4 (>)
+             66 POP_JUMP_IF_FALSE       88
+
+  9          68 LOAD_NAME                6 (print)
+             70 LOAD_CONST               9 ('w > 2')
+             72 LOAD_NAME                3 (v)
+             74 LOAD_CONST              10 (5)
+             76 BINARY_MULTIPLY
+             78 LOAD_NAME                5 (w)
+             80 BINARY_ADD
+             82 CALL_FUNCTION            2
+             84 POP_TOP
+             86 JUMP_FORWARD            18 (to 106)
+
+ 11     >>   88 LOAD_NAME                6 (print)
+             90 LOAD_CONST              11 ('w <= 2')
+             92 LOAD_NAME                3 (v)
+             94 LOAD_CONST              10 (5)
+             96 BINARY_MULTIPLY
+             98 LOAD_NAME                5 (w)
+            100 BINARY_ADD
+            102 CALL_FUNCTION            2
+            104 POP_TOP
+
+ 12     >>  106 LOAD_NAME                2 (arr1)
+            108 LOAD_NAME                4 (j)
+            110 DUP_TOP_TWO
+            112 BINARY_SUBSCR
+            114 LOAD_CONST               5 (1)
+            116 INPLACE_ADD
+            118 ROT_THREE
+            120 STORE_SUBSCR
+
+ 13         122 LOAD_NAME                4 (j)
+            124 LOAD_CONST               5 (1)
+            126 INPLACE_ADD
+            128 STORE_NAME               4 (j)
+            130 JUMP_ABSOLUTE           56
+        >>  132 POP_BLOCK
+            134 JUMP_FORWARD             8 (to 144)
+
+ 15     >>  136 LOAD_NAME                6 (print)
+            138 LOAD_CONST              12 ('忽略')
+            140 CALL_FUNCTION            1
+            142 POP_TOP
+
+ 16     >>  144 LOAD_NAME                1 (arr0)
+            146 LOAD_NAME                0 (i)
+            148 DUP_TOP_TWO
+            150 BINARY_SUBSCR
+            152 LOAD_CONST               1 (10)
+            154 INPLACE_ADD
+            156 ROT_THREE
+            158 STORE_SUBSCR
+
+ 17         160 LOAD_NAME                0 (i)
+            162 LOAD_CONST               5 (1)
+            164 INPLACE_ADD
+            166 STORE_NAME               0 (i)
+            168 JUMP_ABSOLUTE           34
+        >>  170 POP_BLOCK
+
+ 18     >>  172 LOAD_NAME                6 (print)
+            174 LOAD_NAME                0 (i)
+            176 LOAD_NAME                1 (arr0)
+            178 LOAD_NAME                2 (arr1)
+            180 CALL_FUNCTION            3
+            182 POP_TOP
+            184 LOAD_CONST              13 (None)
+            186 RETURN_VALUE

@@ -1,0 +1,66 @@
+co_consts = (10, 20, 30, 40, 50, 'a', 'b', 2, None)
+co_names = ('a0', 'a1', 'a2', 'a3', 'a4', 'a', 'b0', 'b', 'c', 'print')
+  1           0 LOAD_CONST               0 (10)
+              2 STORE_NAME               0 (a0)
+
+  2           4 LOAD_CONST               1 (20)
+              6 STORE_NAME               1 (a1)
+
+  3           8 LOAD_CONST               2 (30)
+             10 STORE_NAME               2 (a2)
+
+  4          12 LOAD_CONST               3 (40)
+             14 STORE_NAME               3 (a3)
+
+  5          16 LOAD_CONST               4 (50)
+             18 STORE_NAME               4 (a4)
+
+  6          20 LOAD_NAME                0 (a0)
+             22 LOAD_NAME                1 (a1)
+             24 LOAD_NAME                2 (a2)
+             26 BINARY_ADD
+             28 BINARY_MULTIPLY
+             30 LOAD_NAME                3 (a3)
+             32 LOAD_NAME                4 (a4)
+             34 BINARY_MULTIPLY
+             36 BINARY_ADD
+             38 STORE_NAME               5 (a)
+
+  7          40 LOAD_CONST               5 ('a')
+             42 STORE_NAME               0 (a0)
+
+  8          44 LOAD_CONST               6 ('b')
+             46 STORE_NAME               6 (b0)
+
+  9          48 LOAD_NAME                0 (a0)
+             50 LOAD_CONST               7 (2)
+             52 BINARY_MULTIPLY
+             54 LOAD_NAME                6 (b0)
+             56 LOAD_CONST               7 (2)
+             58 BINARY_MULTIPLY
+             60 BINARY_ADD
+             62 STORE_NAME               7 (b)
+
+ 10          64 LOAD_NAME                7 (b)
+             66 LOAD_CONST               7 (2)
+             68 BINARY_MULTIPLY
+             70 STORE_NAME               8 (c)
+
+ 11          72 LOAD_NAME                9 (print)
+             74 LOAD_NAME                5 (a)
+             76 LOAD_NAME                0 (a0)
+             78 LOAD_NAME                1 (a1)
+             80 LOAD_NAME                2 (a2)
+             82 LOAD_NAME                3 (a3)
+             84 LOAD_NAME                4 (a4)
+             86 CALL_FUNCTION            6
+             88 POP_TOP
+
+ 12          90 LOAD_NAME                9 (print)
+             92 LOAD_NAME                6 (b0)
+             94 LOAD_NAME                7 (b)
+             96 LOAD_NAME                8 (c)
+             98 CALL_FUNCTION            3
+            100 POP_TOP
+            102 LOAD_CONST               8 (None)
+            104 RETURN_VALUE

@@ -1,0 +1,151 @@
+co_consts = (0, 1, 2, 3, 4, 5, 6, 7, None)
+co_names = ('c', 'arr0', 'i', 'j', 'print')
+  2           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               0 (0)
+              8 LOAD_CONST               0 (0)
+             10 LOAD_CONST               0 (0)
+             12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               0 (0)
+             16 BUILD_LIST               8
+
+  3          18 LOAD_CONST               0 (0)
+             20 LOAD_CONST               0 (0)
+             22 LOAD_CONST               0 (0)
+             24 LOAD_CONST               0 (0)
+             26 LOAD_CONST               0 (0)
+             28 LOAD_CONST               0 (0)
+             30 LOAD_CONST               0 (0)
+             32 LOAD_CONST               0 (0)
+             34 BUILD_LIST               8
+
+  4          36 LOAD_CONST               0 (0)
+             38 LOAD_CONST               0 (0)
+             40 LOAD_CONST               0 (0)
+             42 LOAD_CONST               0 (0)
+             44 LOAD_CONST               0 (0)
+             46 LOAD_CONST               0 (0)
+             48 LOAD_CONST               0 (0)
+             50 LOAD_CONST               0 (0)
+             52 BUILD_LIST               8
+
+  5          54 LOAD_CONST               0 (0)
+             56 LOAD_CONST               0 (0)
+             58 LOAD_CONST               0 (0)
+             60 LOAD_CONST               0 (0)
+             62 LOAD_CONST               0 (0)
+             64 LOAD_CONST               0 (0)
+             66 LOAD_CONST               0 (0)
+             68 LOAD_CONST               0 (0)
+             70 BUILD_LIST               8
+
+  6          72 LOAD_CONST               0 (0)
+             74 LOAD_CONST               0 (0)
+             76 LOAD_CONST               0 (0)
+             78 LOAD_CONST               0 (0)
+             80 LOAD_CONST               0 (0)
+             82 LOAD_CONST               0 (0)
+             84 LOAD_CONST               0 (0)
+             86 LOAD_CONST               0 (0)
+             88 BUILD_LIST               8
+
+  7          90 LOAD_CONST               0 (0)
+             92 LOAD_CONST               0 (0)
+             94 LOAD_CONST               0 (0)
+             96 LOAD_CONST               0 (0)
+             98 LOAD_CONST               0 (0)
+            100 LOAD_CONST               0 (0)
+            102 LOAD_CONST               0 (0)
+            104 LOAD_CONST               0 (0)
+            106 BUILD_LIST               8
+
+  8         108 LOAD_CONST               0 (0)
+            110 LOAD_CONST               0 (0)
+            112 LOAD_CONST               0 (0)
+            114 LOAD_CONST               0 (0)
+            116 LOAD_CONST               0 (0)
+            118 LOAD_CONST               0 (0)
+            120 LOAD_CONST               0 (0)
+            122 LOAD_CONST               0 (0)
+            124 BUILD_LIST               8
+
+  9         126 LOAD_CONST               0 (0)
+            128 LOAD_CONST               0 (0)
+            130 LOAD_CONST               0 (0)
+            132 LOAD_CONST               0 (0)
+            134 LOAD_CONST               0 (0)
+            136 LOAD_CONST               0 (0)
+            138 LOAD_CONST               0 (0)
+            140 LOAD_CONST               0 (0)
+            142 BUILD_LIST               8
+            144 BUILD_LIST               8
+            146 STORE_NAME               0 (c)
+
+ 11         148 LOAD_CONST               0 (0)
+            150 LOAD_CONST               1 (1)
+            152 LOAD_CONST               2 (2)
+            154 LOAD_CONST               3 (3)
+            156 LOAD_CONST               4 (4)
+            158 LOAD_CONST               5 (5)
+            160 LOAD_CONST               6 (6)
+            162 LOAD_CONST               7 (7)
+            164 BUILD_LIST               8
+            166 STORE_NAME               1 (arr0)
+
+ 12         168 SETUP_LOOP              88 (to 258)
+            170 LOAD_NAME                1 (arr0)
+            172 GET_ITER
+        >>  174 FOR_ITER                80 (to 256)
+            176 STORE_NAME               2 (i)
+
+ 13         178 SETUP_LOOP              74 (to 254)
+            180 LOAD_NAME                1 (arr0)
+            182 GET_ITER
+        >>  184 FOR_ITER                66 (to 252)
+            186 STORE_NAME               3 (j)
+
+ 14         188 LOAD_NAME                3 (j)
+            190 POP_JUMP_IF_TRUE       206
+
+ 15         192 LOAD_CONST               1 (1)
+            194 LOAD_NAME                0 (c)
+            196 LOAD_NAME                2 (i)
+            198 BINARY_SUBSCR
+            200 LOAD_NAME                3 (j)
+            202 STORE_SUBSCR
+            204 JUMP_ABSOLUTE          184
+
+ 17     >>  206 LOAD_NAME                0 (c)
+            208 LOAD_NAME                2 (i)
+            210 LOAD_CONST               1 (1)
+            212 BINARY_SUBTRACT
+            214 BINARY_SUBSCR
+            216 LOAD_NAME                3 (j)
+            218 BINARY_SUBSCR
+            220 LOAD_NAME                0 (c)
+            222 LOAD_NAME                2 (i)
+            224 LOAD_CONST               1 (1)
+            226 BINARY_SUBTRACT
+            228 BINARY_SUBSCR
+            230 LOAD_NAME                3 (j)
+            232 LOAD_CONST               1 (1)
+            234 BINARY_SUBTRACT
+            236 BINARY_SUBSCR
+            238 BINARY_ADD
+            240 LOAD_NAME                0 (c)
+            242 LOAD_NAME                2 (i)
+            244 BINARY_SUBSCR
+            246 LOAD_NAME                3 (j)
+            248 STORE_SUBSCR
+            250 JUMP_ABSOLUTE          184
+        >>  252 POP_BLOCK
+        >>  254 JUMP_ABSOLUTE          174
+        >>  256 POP_BLOCK
+
+ 18     >>  258 LOAD_NAME                4 (print)
+            260 LOAD_NAME                0 (c)
+            262 CALL_FUNCTION            1
+            264 POP_TOP
+            266 LOAD_CONST               8 (None)
+            268 RETURN_VALUE

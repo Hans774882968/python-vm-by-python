@@ -1,0 +1,86 @@
+co_consts = (3, 4, 5, 6, 7, 2, 0, 10, 1, '结束力', None)
+co_names = ('arr0', 'arr1', 'ii', 'i', 'jj', 'j', 'print')
+  1           0 LOAD_CONST               0 (3)
+              2 LOAD_CONST               1 (4)
+              4 LOAD_CONST               2 (5)
+              6 LOAD_CONST               3 (6)
+              8 LOAD_CONST               4 (7)
+             10 BUILD_LIST               5
+             12 STORE_NAME               0 (arr0)
+
+  2          14 LOAD_CONST               5 (2)
+             16 LOAD_CONST               0 (3)
+             18 LOAD_CONST               1 (4)
+             20 LOAD_CONST               2 (5)
+             22 BUILD_LIST               4
+             24 STORE_NAME               1 (arr1)
+
+  3          26 LOAD_CONST               6 (0)
+             28 STORE_NAME               2 (ii)
+
+  4          30 SETUP_LOOP              98 (to 130)
+             32 LOAD_NAME                0 (arr0)
+             34 GET_ITER
+        >>   36 FOR_ITER                90 (to 128)
+             38 STORE_NAME               3 (i)
+
+  5          40 LOAD_CONST               6 (0)
+             42 STORE_NAME               4 (jj)
+
+  6          44 SETUP_LOOP              56 (to 102)
+             46 LOAD_NAME                1 (arr1)
+             48 GET_ITER
+        >>   50 FOR_ITER                48 (to 100)
+             52 STORE_NAME               5 (j)
+
+  7          54 LOAD_NAME                6 (print)
+             56 LOAD_NAME                3 (i)
+             58 LOAD_NAME                5 (j)
+             60 LOAD_NAME                3 (i)
+             62 LOAD_CONST               7 (10)
+             64 BINARY_MULTIPLY
+             66 LOAD_NAME                5 (j)
+             68 BINARY_ADD
+             70 CALL_FUNCTION            3
+             72 POP_TOP
+
+  8          74 LOAD_NAME                1 (arr1)
+             76 LOAD_NAME                4 (jj)
+             78 DUP_TOP_TWO
+             80 BINARY_SUBSCR
+             82 LOAD_CONST               8 (1)
+             84 INPLACE_ADD
+             86 ROT_THREE
+             88 STORE_SUBSCR
+
+  9          90 LOAD_NAME                4 (jj)
+             92 LOAD_CONST               8 (1)
+             94 INPLACE_ADD
+             96 STORE_NAME               4 (jj)
+             98 JUMP_ABSOLUTE           50
+        >>  100 POP_BLOCK
+
+ 10     >>  102 LOAD_NAME                0 (arr0)
+            104 LOAD_NAME                2 (ii)
+            106 DUP_TOP_TWO
+            108 BINARY_SUBSCR
+            110 LOAD_CONST               8 (1)
+            112 INPLACE_ADD
+            114 ROT_THREE
+            116 STORE_SUBSCR
+
+ 11         118 LOAD_NAME                2 (ii)
+            120 LOAD_CONST               8 (1)
+            122 INPLACE_ADD
+            124 STORE_NAME               2 (ii)
+            126 JUMP_ABSOLUTE           36
+        >>  128 POP_BLOCK
+
+ 12     >>  130 LOAD_NAME                6 (print)
+            132 LOAD_CONST               9 ('结束力')
+            134 LOAD_NAME                2 (ii)
+            136 LOAD_NAME                4 (jj)
+            138 CALL_FUNCTION            3
+            140 POP_TOP
+            142 LOAD_CONST              10 (None)
+            144 RETURN_VALUE
